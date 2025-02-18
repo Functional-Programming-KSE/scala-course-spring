@@ -36,10 +36,13 @@ jobs:
       - name: List all changed files
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-          PACKAGE_NAME: $${{github.head_ref}} | sed 's/-//g'
         run: |
           for file in ${ALL_CHANGED_FILES}; do
-            echo "$file for ${PACKAGE_NAME} was changed"
+            if [[ "$file" != *"unit1"* ]]; then
+              echo "$file contains unit1"
+            else
+              echo "$file doesn't contain unit1"
+            fi
           done
 
   compile:
