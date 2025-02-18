@@ -38,12 +38,13 @@ jobs:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
           branch_name=${{ github.head_ref }}
+          package_name="${branch_name//-/}"
           
           for file in ${ALL_CHANGED_FILES}; do
-            if [[ "$file" != *"${branch_name}"* ]]; then
-              echo "$file contains unit1"
+            if [[ "$file" != *"${package_name}"* ]]; then
+              echo "$file contains $package_name"
             else
-              echo "$file doesn't contain unit1"
+              echo "$file doesn't contain $package_name"
             fi
           done
 
