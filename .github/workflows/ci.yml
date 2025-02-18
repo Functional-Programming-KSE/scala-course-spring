@@ -37,7 +37,7 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          modified_string="${"unit-1"//-/}"
+          modified_string="unit1"
           for file in ${ALL_CHANGED_FILES}; do
             if [[ "$file" != *"${modified_string}"* ]]; then
               echo "$file contains unit1"
