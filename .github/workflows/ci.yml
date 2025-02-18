@@ -37,9 +37,10 @@ jobs:
         env:
           ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          modified_string="unit1"
+          branch_name=${{ github.head_ref }}
+          
           for file in ${ALL_CHANGED_FILES}; do
-            if [[ "$file" != *"${modified_string}"* ]]; then
+            if [[ "$file" != *"${branch_name}"* ]]; then
               echo "$file contains unit1"
             else
               echo "$file doesn't contain unit1"
