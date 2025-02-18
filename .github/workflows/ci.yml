@@ -42,11 +42,11 @@ jobs:
           
           for file in ${ALL_CHANGED_FILES}; do
             if [[ "$file" != *"${package_name}"* ]]; then
-              echo "$file contains $package_name"
-            else
-              echo "$file doesn't contain $package_name"
+              echo "$file doesn't belong to $branch_name code changes"
+              exit 1
             fi
           done
+          echo "List of all changed files for $branch_name is passed successfully"
 
   compile:
     runs-on: ubuntu-latest
