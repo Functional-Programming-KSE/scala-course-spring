@@ -1,4 +1,4 @@
-## Functional Programming Course at Karazin University
+## Functional Programming Course at KSE
 
 # Scala Course Autumn
 
@@ -228,12 +228,12 @@ in the `sbt` shell.
 For example, to execute `FunctionsSpecification` from Unit 1 `topic`, run the following command:
 
 ```shell
-sbt "Test / testOnly karazin.unit1.topic.FunctionsSpecification"
+sbt "Test / testOnly kse.unit1.topic.FunctionsSpecification"
 ```
 in the command line, or
 
 ```shell
-Test / testOnly karazin.unit1.topic.FunctionsSpecification
+Test / testOnly kse.unit1.topic.FunctionsSpecification
 ```
 
 ### Specific unit tests execution
@@ -249,21 +249,21 @@ Test / testOnly <path to the specific unit>
 ```
 
 in the `sbt` shell, where `<path to the specific unit>` is:
-* `karazin.unit1` for the **Unit 1**;
-* `karazin.unit2` for the **Unit 2**;
+* `kse.unit1` for the **Unit 1**;
+* `kse.unit2` for the **Unit 2**;
 
   ...
 
-* `karazin.unitN` for the **Unit N**;
+* `kse.unitN` for the **Unit N**;
 
 For example, to execute tests for Unit 1, run the following command:
 ```shell
-sbt "Test / testOnly karazin.unit1.*"
+sbt "Test / testOnly kse.unit1.*"
 ```
 in the command line, or
 
 ```shell
-Test / testOnly karazin.unit1.*
+Test / testOnly kse.unit1.*
 ```
 
 in the `sbt` shell.
