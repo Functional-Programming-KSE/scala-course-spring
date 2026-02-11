@@ -61,7 +61,8 @@ To create a new repository on GitHub, follow this [guide](https://docs.github.co
 * Ensure the repository is private.
 * Name the repository `scala-course-autumn` to match the original repository name.
 * Add collaborators:
-  * [Igor Wolkov](https://github.com/IgorWolkov).
+  * [Igor Wolkov](https://github.com/IgorWolkov);
+  * [Kseniia Kravchenko](https://github.com/KravchenkoKseniia)
 
 ### Clone the course repository
 To clone the repository, follow this [guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
@@ -437,8 +438,8 @@ to a specific unit. Violating the conventions leads to failed builds.
 6. Push the changes to your private remote GitHub repository.
 7. Create a pull request.
 8. Assign reviewers: 
- *[Igor Wolkov](https://github.com/IgorWolkov);
- *[Kseniia Kravchenko](https://github.com/KravchenkoKseniia).
+ * [Igor Wolkov](https://github.com/IgorWolkov);
+ * [Kseniia Kravchenko](https://github.com/KravchenkoKseniia).
 
 
 # IntelliJ IDEA UI Git management
