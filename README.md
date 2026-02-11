@@ -1,6 +1,6 @@
-## Functional Programming Course at KSE
+## Functional Programming Course at Karazin University
 
-# Scala Course Spring
+# Scala Course Autumn
 
 ## Documentation and Resources
 * [Scala 3 Reference](https://docs.scala-lang.org/scala3/reference/)
@@ -59,22 +59,20 @@ Follow this [guide](https://www.jetbrains.com/help/idea/github.html) to set up y
 ### Create a new repository on GitHub
 To create a new repository on GitHub, follow this [guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository).
 * Ensure the repository is private.
-* Name the repository `scala-course-spring` to match the original repository name.
+* Name the repository `scala-course-autumn` to match the original repository name.
 * Add collaborators:
-  * [Igor Wolkov](https://github.com/IgorWolkov);
-  * [Ivan Kyrylov](https://github.com/kivanval);
-  * [Yaroslav Sydorenko](https://github.com/yaroslav73).
+  * [Igor Wolkov](https://github.com/IgorWolkov).
 
-### Clone the Course Repository
+### Clone the course repository
 To clone the repository, follow this [guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 **Important**: Do not fork the repository.
 
-The course repository is [here](https://github.com/Functional-Programming-KSE/scala-course-spring).
+The course repository is [here](https://github.com/Mexmath-Foundation/scala-course-autumn).
 You can use IntelliJ IDEA or do it manually.
-To clone manually, create a new folder called `scala-course-spring`, move into the folder, and run
+To clone manually, create a new folder called `scala-course-autumn`, move into the folder, and run
 ````shell
-git clone https://github.com/Functional-Programming-KSE/scala-course-spring.git
+git clone https://github.com/Mexmath-Foundation/scala-course-autumn.git
 ````
 in the command line.
 
@@ -86,8 +84,8 @@ git remote -v
 ```
 The output should be:
 ```shell
-origin	https://github.com/Functional-Programming-KSE/scala-course-spring.git (fetch)
-origin	https://github.com/Functional-Programming-KSE/scala-course-spring.git (push)
+origin	https://github.com/Mexmath-Foundation/scala-course-autumn.git (fetch)
+origin	https://github.com/Mexmath-Foundation/scala-course-autumn.git (push)
 ```
 #### Check the branches
 To check the branches, run the following command in the command line:
@@ -117,8 +115,8 @@ git remote rename origin course
 
 Run `git remote -v` in the command line. The output should be:
 ```shell
-course	https://github.com/Functional-Programming-KSE/scala-course-spring.git (fetch)
-course	https://github.com/Functional-Programming-KSE/scala-course-spring.git (push)
+course	https://github.com/Mexmath-Foundation/scala-course-autumn.git (fetch)
+course	https://github.com/Mexmath-Foundation/scala-course-autumn.git (push)
 ```
 #### Disable pushes
 To prevent pushing to the course repository, replace the push URL with any non-existent value (for example, `DISABLED`) and run the following command in the command line:
@@ -128,7 +126,7 @@ git remote set-url --push course DISABLED
 
 Run `git remote -v` in the command line. The output should be:
 ```shell
-course	https://github.com/Functional-Programming-KSE/scala-course-spring.git (fetch)
+course	https://github.com/Mexmath-Foundation/scala-course-autumn.git (fetch)
 course	DISABLED (push)
 ```
 
@@ -136,7 +134,7 @@ course	DISABLED (push)
 To link the local repository to your private GitHub repository, add a new `origin`.
 
 #### Open the newly created repository
-Open your new GitHub repository page and follow the instructions in the `…or push an existing repository from the command line` section.
+Open your new GitHub repository page and follow the instructions in the `...or push an existing repository from the command line` section.
 There should be a list of commands:
 ```shell
 git remote add origin <your private repository>
@@ -147,10 +145,10 @@ Run each command one by one in the command line.
 
 Run `git remote -v` in the command line. The output should be:
 ```shell
-course	https://github.com/Functional-Programming-KSE/scala-course-spring.git (fetch)
+course	https://github.com/Mexmath-Foundation/scala-course-autumn.git (fetch)
 course	DISABLED (push)
-origin  https://github.com/<your GitHub account>/scala-course-spring.git (fetch)
-origin  https://github.com/<your GitHub account>/scala-course-spring.git (push)
+origin  https://github.com/<your GitHub account>/scala-course-autumn.git (fetch)
+origin  https://github.com/<your GitHub account>/scala-course-autumn.git (push)
 ```
 
 ### Pull Updates from the Original Course Repository
@@ -184,7 +182,7 @@ in the `sbt` shell.
 ### Test code compilation
 To compile the test code (located in the `test/` folder), run
 ```shell
-sbt Test / compile
+sbt "Test / compile"
 ```
 in the command line, or
 
@@ -216,55 +214,55 @@ Since some homework tests have not been implemented yet, this results in a failu
 ### Single test execution
 To execute a single test, run the following command:
 ```shell
-sbt testOnly <path to the test>
+sbt "Test / testOnly <path to the test>"
 ```
 in the command line, or
 
 ```shell
-testOnly <path to the test>
+Test / testOnly <path to the test>
 ```
 
 in the `sbt` shell.
 
-For example, to run `FunctionsSpecification` from Unit 1 `topic`, run the following command:
+For example, to execute `FunctionsSpecification` from Unit 1 `topic`, run the following command:
 
 ```shell
-sbt testOnly kse.unit1.topic.FunctionsSpecification
+sbt "Test / testOnly karazin.unit1.topic.FunctionsSpecification"
 ```
 in the command line, or
 
 ```shell
-testOnly kse.unit1.topic.FunctionsSpecification
+Test / testOnly karazin.unit1.topic.FunctionsSpecification
 ```
 
 ### Specific unit tests execution
 To execute the tests for a specific unit, run the following command:
 
 ```shell
-sbt testOnly <path to the specific unit>
+sbt "Test / testOnly <path to the specific unit>"
 ```
 in the command line, or
 
 ```shell
-testOnly <path to the specific unit>
+Test / testOnly <path to the specific unit>
 ```
 
 in the `sbt` shell, where `<path to the specific unit>` is:
-* `kse.unit1` for the **Unit 1**;
-* `kse.unit2` for the **Unit 2**;
+* `karazin.unit1` for the **Unit 1**;
+* `karazin.unit2` for the **Unit 2**;
 
   ...
 
-* `kse.unitN` for the **Unit N**;
+* `karazin.unitN` for the **Unit N**;
 
 For example, to execute tests for Unit 1, run the following command:
 ```shell
-sbt testOnly kse.unit1
+sbt "Test / testOnly karazin.unit1.*"
 ```
 in the command line, or
 
 ```shell
-testOnly kse.unit1
+Test / testOnly karazin.unit1.*
 ```
 
 in the `sbt` shell.
@@ -273,8 +271,8 @@ in the `sbt` shell.
 ## Code style
 
 [Scalafmt](https://scalameta.org/scalafmt/) is used to check code formatting
-and to reformat code according to the rules described in `.scalafmt.conf`
-in the root (`scala-course-spring`) folder.
+and reformat code according to the rules described in `.scalafmt.conf`
+in the root (`scala-course-autumn`) folder.
 These rules are applied in GitHub Actions builds.
 
 Follow the [guide](https://scalameta.org/scalafmt/docs/installation.html#intellij)
@@ -392,23 +390,23 @@ in the `sbt` shell.
 To compile the code, fix formatting, and run tests for a specific unit, run
 
 ```shell
-sbt clean compile Test/compile scalafmtAll scalafmtCheckAll testOnly <path to the specific unit>
+sbt "clean compile Test/compile scalafmtAll scalafmtCheckAll Test / testOnly <path to the specific unit>"
 ```
 in the command line, or
 
 ```shell
-clean; compile; Test/compile; scalafmtAll; scalafmtCheckAll; testOnly <path to the specific unit>
+clean; compile; Test/compile; scalafmtAll; scalafmtCheckAll; Test / testOnly <path to the specific unit>
 ```
 
 # GitHub Actions build
 To replicate the behavior of the GitHub Actions build locally, run:
 
 ```shell
-sbt clean compile Test/compile scalafmtCheckAll testOnly <path to the specific unit>
+sbt "clean compile Test/compile scalafmtCheckAll Test / testOnly <path to the specific unit>"
 ```
 in the command line, or
 ```shell
-clean; compile; Test/compile; scalafmtCheckAll; testOnly <path to the specific unit>
+clean; compile; Test/compile; scalafmtCheckAll; Test / testOnly <path to the specific unit>
 ```
 in the `sbt` shell.
 
@@ -438,10 +436,9 @@ to a specific unit. Violating the conventions leads to failed builds.
 5. Commit all necessary changes to the local `unit-n` branch.
 6. Push the changes to your private remote GitHub repository.
 7. Create a pull request.
-8. Assign reviewers:
-   * [Igor Wolkov](https://github.com/IgorWolkov);
-   * [Ivan Kyrylov](https://github.com/kivanval);
-   * [Yaroslav Sydorenko](https://github.com/yaroslav73).
+8. Assign reviewers: 
+ *[Igor Wolkov](https://github.com/IgorWolkov);
+ *[Kseniia Kravchenko](https://github.com/KravchenkoKseniia).
 
 
 # IntelliJ IDEA UI Git management
